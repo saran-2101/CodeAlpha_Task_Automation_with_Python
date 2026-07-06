@@ -186,33 +186,6 @@ The program handles common errors gracefully:
 | **No Email.txt created** | Verify `.txt` files contain valid Gmail addresses |
 | **Files not moving** | Check that source and destination paths are correct |
 
-## 📝 Code Example
-
-```python
-import os
-import shutil
-import re
-
-source = r"C:\Users\YourName\Downloads\Source"
-destination = r"C:\Users\YourName\Downloads\Output"
-
-# Create output folders
-os.makedirs(os.path.join(destination, "Text Files"), exist_ok=True)
-os.makedirs(os.path.join(destination, "Images"), exist_ok=True)
-
-emails = set()
-
-# Process files
-for file in os.listdir(source):
-    file_path = os.path.join(source, file)
-    
-    if file.endswith(".txt"):
-        shutil.move(file_path, os.path.join(destination, "Text Files", file))
-        # Extract emails...
-    
-    elif file.endswith((".jpg", ".jpeg", ".png")):
-        shutil.move(file_path, os.path.join(destination, "Images", file))
-```
 
 ## 📄 License
 
