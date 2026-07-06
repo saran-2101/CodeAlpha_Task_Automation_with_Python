@@ -1,6 +1,3 @@
-# CodeAlpha_Task_Automation_with_Python
-
-
 # Python File Organizer & Gmail Extractor
 
 ## 📌 Overview
